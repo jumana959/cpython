@@ -1,0 +1,33 @@
+import turtle
+
+# إعداد الشاشة
+screen = turtle.Screen()
+screen.bgcolor("white")
+
+# إعداد القلم
+pen = turtle.Turtle()
+pen.color("red")
+pen.pensize(3)
+pen.speed(5)
+
+# رسم القلب
+pen.begin_fill()
+pen.left(50)
+pen.forward(133)
+pen.circle(50, 200)
+pen.right(140)
+pen.circle(50, 200)
+pen.forward(133)
+pen.end_fill()
+
+# كتابة الرسالة
+pen.penup()
+pen.goto(-70, -120)  # مكان الكتابة تحت القلب
+pen.color("black")
+pen.write("I love you", font=("Arial", 24, "bold"))
+
+# إخفاء القلم
+pen.hideturtle()
+
+# إبقاء النافذة مفتوحة
+turtle.done()
